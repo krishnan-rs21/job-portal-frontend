@@ -1,6 +1,22 @@
 {
   "en": {
     "translation": {
+      "home": {
+        "heroTitle": "Find your next career opportunity",
+        "searchPlaceholder": "Search for jobs...",
+        "viewDetails": "View Details"
+      },
+      "jobs": {
+        "searchPlaceholder": "Search for jobs...",
+        "allCategories": "All Categories",
+        "allExperience": "All Experience Levels",
+        "reset": "Reset Filters",
+        "loading": "Loading...",
+        "noJobs": "No jobs found",
+        "viewDetails": "View Details",
+        "prev": "Previous",
+        "next": "Next"
+      },
       "nav": {
         "home": "Home",
         "jobs": "Jobs",

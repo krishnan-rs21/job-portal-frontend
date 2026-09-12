@@ -1,4 +1,5 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import jobsReducer from "./slices/jobsSlice";
 
 interface AuthState {
   accessToken: string | null;
@@ -49,6 +50,7 @@ export const store = configureStore({
   reducer: {
     auth: authSlice.reducer,
     meta: metaSlice.reducer,
+    jobs: jobsReducer,
   },
 });
 

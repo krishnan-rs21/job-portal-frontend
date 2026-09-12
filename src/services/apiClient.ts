@@ -1,8 +1,8 @@
-import axios from 'axios';
-import { store } from '../store';
+import axios from "axios";
+import { store } from "../store";
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:5000/api/v1',
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 apiClient.interceptors.request.use((config) => {
@@ -17,10 +17,10 @@ apiClient.interceptors.response.use(
   (response) => response,
   async (error) => {
     if (error.response?.status === 401) {
-        // Implement refresh logic here if needed, or redirect to login
+      // Implement refresh logic here if needed, or redirect to login
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export default apiClient;

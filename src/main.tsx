@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App";
 import { store } from "./store";
 import "./i18n";
 import "./index.css";
 import MetadataProvider from "./MetadataProvider";
 import Layout from "./Layout";
+import HomePage from "./pages/HomePage";
+import JobsPage from "./pages/JobsPage";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -16,8 +17,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <BrowserRouter>
           <Layout>
             <Routes>
-              <Route path="/" element={<h1>Home</h1>} />
-              <Route path="/jobs" element={<h1>Jobs</h1>} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/jobs" element={<JobsPage />} />
               <Route path="/jobs/:uuid" element={<h1>Job Details</h1>} />
               <Route path="/applications" element={<h1>Applications</h1>} />
             </Routes>

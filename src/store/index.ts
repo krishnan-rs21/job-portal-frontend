@@ -1,5 +1,6 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import jobsReducer from "./slices/jobsSlice";
+import applicationsReducer from "./slices/applicationsSlice";
 
 interface AuthState {
   accessToken: string | null;
@@ -51,6 +52,7 @@ export const store = configureStore({
     auth: authSlice.reducer,
     meta: metaSlice.reducer,
     jobs: jobsReducer,
+    applications: applicationsReducer,
   },
 });
 

@@ -15,7 +15,19 @@
         "noJobs": "No jobs found",
         "viewDetails": "View Details",
         "prev": "Previous",
-        "next": "Next"
+        "next": "Next",
+        "applyNow": "Apply Now",
+        "submitting": "Submitting...",
+        "applied": "Already Applied",
+        "applicationFailed": "Application failed, please try again."
+      },
+      "apps": {
+        "title": "My Applications",
+        "noApps": "You have not applied to any jobs yet.",
+        "browseJobs": "Browse Jobs",
+        "jobTitle": "Job Title",
+        "status": "Status",
+        "date": "Date Applied"
       },
       "nav": {
         "home": "Home",

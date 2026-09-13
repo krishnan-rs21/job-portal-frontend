@@ -9,6 +9,8 @@ import MetadataProvider from "./MetadataProvider";
 import Layout from "./Layout";
 import HomePage from "./pages/HomePage";
 import JobsPage from "./pages/JobsPage";
+import JobDetailsPage from "./pages/JobDetailsPage";
+import MyApplicationsPage from "./pages/MyApplicationsPage";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -19,8 +21,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/jobs" element={<JobsPage />} />
-              <Route path="/jobs/:uuid" element={<h1>Job Details</h1>} />
-              <Route path="/applications" element={<h1>Applications</h1>} />
+              <Route path="/jobs/:uuid" element={<JobDetailsPage />} />
+              <Route path="/my-applications" element={<MyApplicationsPage />} />
             </Routes>
           </Layout>
         </BrowserRouter>

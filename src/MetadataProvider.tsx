@@ -9,9 +9,14 @@ const MetadataProvider: React.FC<{ children: React.ReactNode }> = ({
   const dispatch = useDispatch();
 
   useEffect(() => {
-    apiClient.get("/meta/config").then((res) => {
-      dispatch(setMeta(res.data.data));
-    });
+    apiClient
+      .get("/meta/config")
+      .then((res) => {
+        dispatch(setMeta(res.data.data));
+      })
+      .catch(() => {
+        // API may be unavailable while running the frontend alone.
+      });
   }, [dispatch]);
 
   return <>{children}</>;

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLandingData } from "../store/slices/jobsSlice";
-import { RootState, AppDispatch } from "../store";
+import type { RootState, AppDispatch } from "../store";
 import { Link, useNavigate } from "react-router-dom";
 
 const HomePage: React.FC = () => {

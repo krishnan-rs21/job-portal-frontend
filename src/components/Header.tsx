@@ -9,7 +9,7 @@ const Header: React.FC = () => {
       <nav>
         <Link to="/" className="mr-4">{t('nav.home')}</Link>
         <Link to="/jobs" className="mr-4">{t('nav.jobs')}</Link>
-        <Link to="/applications">{t('nav.applications')}</Link>
+        <Link to="/my-applications">{t('nav.applications')}</Link>
       </nav>
       <div>
         <button>{t('nav.login')}</button>

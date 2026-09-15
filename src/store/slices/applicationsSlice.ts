@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import apiClient from "../services/apiClient";
+import apiClient from "../../services/apiClient";
 
 interface Application {
   uuid: string;

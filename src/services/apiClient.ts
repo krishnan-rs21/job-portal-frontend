@@ -1,12 +1,19 @@
 import axios from "axios";
-import { store } from "../store";
+
+type TokenGetter = () => string | null;
+
+let getAccessToken: TokenGetter = () => null;
+
+export const bindAccessTokenGetter = (getter: TokenGetter) => {
+  getAccessToken = getter;
+};
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
 });
 
 apiClient.interceptors.request.use((config) => {
-  const token = store.getState().auth.accessToken;
+  const token = getAccessToken();
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

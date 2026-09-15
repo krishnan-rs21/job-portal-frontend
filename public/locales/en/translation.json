@@ -1,49 +1,45 @@
 {
-  "en": {
-    "translation": {
-      "home": {
-        "heroTitle": "Find your next career opportunity",
-        "searchPlaceholder": "Search for jobs...",
-        "viewDetails": "View Details"
-      },
-      "jobs": {
-        "searchPlaceholder": "Search for jobs...",
-        "allCategories": "All Categories",
-        "allExperience": "All Experience Levels",
-        "reset": "Reset Filters",
-        "loading": "Loading...",
-        "noJobs": "No jobs found",
-        "viewDetails": "View Details",
-        "prev": "Previous",
-        "next": "Next",
-        "applyNow": "Apply Now",
-        "submitting": "Submitting...",
-        "applied": "Already Applied",
-        "applicationFailed": "Application failed, please try again."
-      },
-      "apps": {
-        "title": "My Applications",
-        "noApps": "You have not applied to any jobs yet.",
-        "browseJobs": "Browse Jobs",
-        "jobTitle": "Job Title",
-        "status": "Status",
-        "date": "Date Applied"
-      },
-      "nav": {
-        "home": "Home",
-        "jobs": "Jobs",
-        "applications": "My Applications",
-        "login": "Sign In",
-        "signup": "Sign Up",
-        "logout": "Logout"
-      },
-      "footer": {
-        "copyright": "© 2026 JobPortal. All rights reserved."
-      },
-      "errors": {
-        "unauthorized": "Unauthorized access.",
-        "serverError": "Something went wrong."
-      }
-    }
+  "home": {
+    "heroTitle": "Find your next career opportunity",
+    "searchPlaceholder": "Search for jobs...",
+    "viewDetails": "View Details"
+  },
+  "jobs": {
+    "searchPlaceholder": "Search for jobs...",
+    "allCategories": "All Categories",
+    "allExperience": "All Experience Levels",
+    "reset": "Reset Filters",
+    "loading": "Loading...",
+    "noJobs": "No jobs found",
+    "viewDetails": "View Details",
+    "prev": "Previous",
+    "next": "Next",
+    "applyNow": "Apply Now",
+    "submitting": "Submitting...",
+    "applied": "Already Applied",
+    "applicationFailed": "Application failed, please try again."
+  },
+  "apps": {
+    "title": "My Applications",
+    "noApps": "You have not applied to any jobs yet.",
+    "browseJobs": "Browse Jobs",
+    "jobTitle": "Job Title",
+    "status": "Status",
+    "date": "Date Applied"
+  },
+  "nav": {
+    "home": "Home",
+    "jobs": "Jobs",
+    "applications": "My Applications",
+    "login": "Sign In",
+    "signup": "Sign Up",
+    "logout": "Logout"
+  },
+  "footer": {
+    "copyright": "© 2026 JobPortal. All rights reserved."
+  },
+  "errors": {
+    "unauthorized": "Unauthorized access.",
+    "serverError": "Something went wrong."
   }
 }

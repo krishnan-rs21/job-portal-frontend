@@ -1,5 +1,10 @@
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import apiClient from "../services/apiClient";
+import {
+  createSlice,
+  createAsyncThunk,
+  isPending,
+  isRejected,
+} from "@reduxjs/toolkit";
+import apiClient from "../../services/apiClient";
 
 interface Job {
   uuid: string;
@@ -59,19 +64,13 @@ const jobsSlice = createSlice({
         state.list.meta = action.payload.meta;
         state.status = "succeeded";
       })
-      .addMatcher(
-        (action) => action.type.endsWith("/pending"),
-        (state) => {
-          state.status = "loading";
-        },
-      )
-      .addMatcher(
-        (action) => action.type.endsWith("/rejected"),
-        (state, action) => {
-          state.status = "failed";
-          state.error = action.error.message || "Failed";
-        },
-      );
+      .addMatcher(isPending(fetchLandingData, fetchJobsList), (state) => {
+        state.status = "loading";
+      })
+      .addMatcher(isRejected(fetchLandingData, fetchJobsList), (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message || "Failed";
+      });
   },
 });
 

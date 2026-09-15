@@ -1,4 +1,5 @@
-import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { configureStore, createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import { bindAccessTokenGetter } from "../services/apiClient";
 import jobsReducer from "./slices/jobsSlice";
 import applicationsReducer from "./slices/applicationsSlice";
 
@@ -58,3 +59,5 @@ export const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+
+bindAccessTokenGetter(() => store.getState().auth.accessToken);

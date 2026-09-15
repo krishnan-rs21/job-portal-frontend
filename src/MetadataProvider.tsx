@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setMeta } from "./store";
+import type { AppDispatch } from "./store";
+import { fetchLandingData } from "./store/slices/jobsSlice";
 import apiClient from "./services/apiClient";
 
 const MetadataProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     apiClient
@@ -14,9 +16,8 @@ const MetadataProvider: React.FC<{ children: React.ReactNode }> = ({
       .then((res) => {
         dispatch(setMeta(res.data.data));
       })
-      .catch(() => {
-        // API may be unavailable while running the frontend alone.
-      });
+      .catch(() => undefined);
+    dispatch(fetchLandingData());
   }, [dispatch]);
 
   return <>{children}</>;
